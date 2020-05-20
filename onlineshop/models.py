@@ -61,23 +61,23 @@ class User(db.Model, UserMixin):
 #     def __repr__(self):
 #         return f"Supplier('{self.first_name}', '{self.last_name}')"
 
-# old 'Book' table
-class Tea(db.Model):
-
-    __tablename__ = 'tea'
-
-    id = db.Column(db.Integer, primary_key=True)
-    tea_name = db.Column(db.String(50),nullable=False)
-    description = db.Column(db.String(120), nullable=False)
-    price = db.Column(db.Numeric(10,2), nullable=False)
-    tea_picture = db.Column(db.String(30), nullable=False, default='tea_default.png')
-    stock_level = db.Column(db.Integer, nullable=False)
-    supplier_name = db.Column(db.String(50), nullable=False)
-    # Supplier as a foreign key is mothballed.
-    # supplier_id = db.Column(db.Integer, db.ForeignKey('supplier.id'), nullable=False)
-
-    def __repr__(self):
-        return f"Tea('{self.tea_name}', '{self.description}', '{self.price}', '{self.stock_level}')"
+# old 'Book' table, removed to make this operate without this functionality.
+# class Tea(db.Model):
+#
+#     __tablename__ = 'tea'
+# 
+#     id = db.Column(db.Integer, primary_key=True)
+#     tea_name = db.Column(db.String(50),nullable=False)
+#     description = db.Column(db.String(120), nullable=False)
+#     price = db.Column(db.Numeric(10,2), nullable=False)
+#     tea_picture = db.Column(db.String(30), nullable=False, default='tea_default.png')
+#     stock_level = db.Column(db.Integer, nullable=False)
+#     supplier_name = db.Column(db.String(50), nullable=False)
+#     # Supplier as a foreign key is mothballed.
+#     # supplier_id = db.Column(db.Integer, db.ForeignKey('supplier.id'), nullable=False)
+#
+#     def __repr__(self):
+#         return f"Tea('{self.tea_name}', '{self.description}', '{self.price}', '{self.stock_level}')"
 
 # development area end.
 
