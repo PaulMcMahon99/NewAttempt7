@@ -39,6 +39,8 @@ login_manager.init_app(app)
 # This will move the users to the login screen when called
 login_manager.login_view = "users.login"
 
+# To make this function, the non-functioning pages have been commented out.
+# This is the shop and the cart.
 
 # The bluerints used in the project are controlled here, they
 # are registered to the app by this configuration.
@@ -46,11 +48,11 @@ from onlineshop.core.views import core
 from onlineshop.users.views import users
 from onlineshop.blog_posts.views import blog_posts
 from onlineshop.error_pages.handlers import error_pages
-from onlineshop.shop.views import shop_items
+# from onlineshop.shop.views import shop_items
 
 # here are the blueprints so far.
 app.register_blueprint(core)
 app.register_blueprint(users)
 app.register_blueprint(blog_posts)
 app.register_blueprint(error_pages)
-app.register_blueprint(shop_items)
+# app.register_blueprint(shop_items)
